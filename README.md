@@ -1,2 +1,2 @@
-# WeightThing
-A HX711 thing for weighing things.
+# RelayThing
+A relay thing for switching electric devices on and off.
