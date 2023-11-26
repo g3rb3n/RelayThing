@@ -30,11 +30,11 @@ void setup()
 
   thing.begin();
 
-  thing.addActuator(thing.clientId() + "/relay/switch", [](Value& value){
+  thing.addActuator("things/" + thing.clientId() + "/relay/switch", [](Value& value){
     state = (bool)value;
     digitalWrite(PIN, state);
     Serial.println("Got:" + String(state));
-    thing.publish(thing.clientId() + "/relay/state", value);
+    thing.publish("things/" + thing.clientId() + "/relay/state", value);
   });
 
   //thing.addSensor(String("sensor/relay/") + thing.clientId(), 1000, [](Value& value){
